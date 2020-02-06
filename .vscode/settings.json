@@ -1,0 +1,11 @@
+{
+    "prettier.useTabs": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.smoothScrolling": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "html.format.enable": false,
+    "php.validate.run": "onType",
+    "restructuredtext.confPath": ""
+}
