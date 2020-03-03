@@ -17,7 +17,7 @@ class Inventory extends CI_Controller
                 // $this->load->view('templates/sidebar', $data);
                 // $this->load->view('templates/topbar', $data);
                 $this->load->view('inventory/dashboard', $data);
-                $this->load->view('inventory/off_canvas', $data);
+                $this->load->view('templates/off_canvas', $data);
                 $this->load->view('templates/foot');
         }
 
