@@ -1,14 +1,15 @@
-</div>
-<div class="container-fluid text-center">
-  <p>Copyright &copy; 2019-2020<br>
-    <b>Muhamad Ridwan Fathoni<br>PT. Global Mekar Mandiri</b></p>
-</div>
+<footer class="container-fluid text-center label secondary float-center margin-bottom-0">
+  <label>Hak Cipta &copy; 2019-2020
+    <br>Muhamad Ridwan Fathoni<br>
+    <a href="<?php echo base_url(); ?>">PT. Global Mekar Mandiri</a>
+  </label>
 
-<script src="<?php echo base_url(); ?>assets/jquery/jquery.js"></script>
-<script src="<?php echo base_url(); ?>assets/foundation/js/foundation.js"></script>
-<script src="<?php echo base_url(); ?>assets/what-input/what-input.js"></script>
+</footer>
+
 <script>
-  $(document).foundation();
+  $(function() {
+    $(document).foundation();
+  });
 </script>
 
 </body>

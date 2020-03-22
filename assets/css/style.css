@@ -1,0 +1,25 @@
+body {
+	font-family: "Ubuntu", sans-serif;
+	background-color: dimgray;
+}
+.off-canvas {
+	background: darkslategray;
+	color: white;
+}
+ul li a {
+	/* background: rgb(192, 27, 27); */
+	color: white;
+}
+.fixed-left {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 1px;
+	background-color: transparent;
+
+	/* border: 32px solid #73AD21; */
+}
+footer label a {
+	color: lightgray;
+}

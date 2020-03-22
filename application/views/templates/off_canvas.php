@@ -2,15 +2,27 @@
     <div class="off-canvas-wrapper">
         <div class="off-canvas position-left" id="offCanvasLeft1" data-off-canvas>
             <!-- Your menu or Off-canvas content goes here -->
-            <ul class="vertical menu accordion-menu" data-accordion-menu>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Inventory</a></li>
-                <li><a href="#">Order</a></li>
-                <li><a href="#">Purchase</a></li>
-                <li><a href="#">Report</a></li>
-                <li><a href="#">Forecast</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Item 1B</a></li>
+            <ul class=" vertical menu accordion-menu" data-accordion-menu>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Inventaris</a></li>
+                <li><a href="#">Gudang</a></li>
+                <li><a href="#">Projek</a></li>
+                <li><a href="#">Pesanan</a></li>
+                <li><a href="#">Pembelian</a></li>
+                <li><a href="#">Laporan</a></li>
+                <li><a href="#">Prakira</a>
+                <li><a href="#">-</a>
+                    <ul class="menu vertical nested">
+                        <li><a href="#">Item 1A</a></li>
+                        <li><a href="#">Item 1B</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">-</a>
+                    <ul class="menu vertical nested">
+                        <li><a href="#">Item 1A</a></li>
+                        <li><a href="#">Item 1B</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <div class="off-canvas position-right" id="offCanvasRight1" data-off-canvas>
@@ -22,11 +34,9 @@
         <div class="off-canvas position-bottom" id="offCanvasBottom1" data-off-canvas>
             <!-- Your menu or Off-canvas content goes here -->D
         </div>
-        <div class="off-canvas-content" data-off-canvas-content>
-            <button type="button" class="button" data-toggle="offCanvasLeft1">Open Left</button>
-            <button type="button" class="button" data-toggle="offCanvasRight1">Open Right</button>
-            <button type="button" class="button" data-toggle="offCanvasTop1">Open Top</button>
-            <button type="button" class="button" data-toggle="offCanvasBottom1">Open Bottom</button>
+
+        <div class="off-canvas-content position-fixed-bottom" data-off-canvas-content>
+            <button type="button" class="button fixed-left" data-toggle="offCanvasLeft1"></button>
         </div>
     </div>
 </div>
