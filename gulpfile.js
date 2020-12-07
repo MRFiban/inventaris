@@ -16,8 +16,8 @@ const source = {
 	js: [
 		"node_modules/jquery/dist/jquery.js",
 		"node_modules/motion-ui/dist/motion-ui.js",
-		"node_modules/foundation-sites/dist/js/foundation.js",
-		"node_modules/what-input/dist/what-input.js"
+		"node_modules/what-input/dist/what-input.js",
+		"src/js/foundation.js"
 	]
 };
 
@@ -30,27 +30,28 @@ function cssTranspile() {
 			includePaths: source.scss
 		}),
 
-		postcss([autoprefixer()]),
+		postcss([autoprefixer(), cssnano()]),
 		sourcemaps.write("."),
 		dest("assets/css"),
 		server.stream()
 	);
 }
 
-function cssMinify() {
-	return src("assets/css/app.css")
-		.pipe(postcss([cssnano()]))
-		.pipe(dest("assets/css"));
-}
-
 function jsTranspile() {
-	return gulp
-		.src("src/**/*.js")
+	return src("src/**/*.js")
 		.pipe(sourcemaps.init())
 		.pipe(babel())
 		.pipe(concat("all.js"))
 		.pipe(sourcemaps.write("."))
 		.pipe(gulp.dest("dist"));
+}
+
+function buildJs() {
+	return src(source.js)
+		.pipe(babel())
+		.pipe(concat("app.js"))
+		.pipe(uglify())
+		.pipe(dest("assets/js"));
 }
 
 function jsBundle() {
@@ -76,7 +77,8 @@ function serve(done) {
 	watch("*.html").on("change", reload);
 }
 
-exports.buildcss = series(cssTranspile, cssMinify);
-exports.buildjs = series(jsBundle);
+exports.buildcss = series(cssTranspile);
+exports.buildjs = series(buildJs);
+exports.test = series(buildJs);
 exports.default = series(cssTranspile, jsBundle, serve);
 exports.sync = series(serve);

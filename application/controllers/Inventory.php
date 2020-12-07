@@ -5,12 +5,50 @@ class Inventory extends CI_Controller
         {
                 parent::__construct();
                 $this->load->model('inventory_model');
-                $this->load->helper('url_helper');
+                $this->load->helper('url');
         }
 
         public function index()
         {
-                $data['inventory'] = $this->inventory_model->get_news();
+                $this->dashboard();
+        }
+        public function add_item()
+        {
+                $this->load->library('form_validation');
+                $data['title'] = 'Add Item';
+                $data['items'] = $this->inventory_model->get_items(); //test
+
+                $this->form_validation->set_rules('test', 'Text String', 'required');
+                if ($this->form_validation->run() === FALSE) {
+                        $this->load->view('templates/head', $data);
+                        $this->load->view('inventory/add_item', $data);
+                        $this->load->view('templates/off_canvas', $data);
+                        $this->load->view('templates/foot');
+                } else {
+                        $this->inventory_model->add_item();
+                        echo "Success!! But DO NOT reload this page!!";
+                }
+        }
+        public function barcodes()
+        {
+        }
+        public function current_inventory()
+        {
+                // $data['inventory'] = $this->inventory_model->get_news();
+                $data['title'] = 'Inventaris';
+
+                $this->load->view('templates/head', $data);
+                // $this->load->view('templates/sidebar', $data);
+                // $this->load->view('templates/topbar', $data);
+                $this->load->view('inventory/current_inventory', $data);
+                $this->load->view('templates/off_canvas', $data);
+                $this->load->view('templates/foot');
+        }
+        public function dashboard()
+        {
+                $this->load->library('form_validation');
+
+                $data['inventory'] = $this->inventory_model->get_items();
                 $data['title'] = 'Dashboard';
 
                 $this->load->view('templates/head', $data);
@@ -19,18 +57,6 @@ class Inventory extends CI_Controller
                 $this->load->view('inventory/dashboard', $data);
                 $this->load->view('templates/off_canvas', $data);
                 $this->load->view('templates/foot');
-        }
-        public function add_items()
-        {
-        }
-        public function barcodes()
-        {
-        }
-        public function current_inventory()
-        {
-        }
-        public function dashboard()
-        {
         }
         public function forecast()
         {

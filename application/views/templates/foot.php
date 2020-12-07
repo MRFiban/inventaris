@@ -9,6 +9,19 @@
 <script>
   $(function() {
     $(document).foundation();
+    $('#inventory_table').DataTable({
+      "paging": true,
+      "ordering": true,
+      "info": true,
+      "order": [
+        [0, "asc"]
+      ],
+      "scrollX": true,
+      dom: 'B<"clear">lfrtip',
+      buttons: [
+        'copy', 'excel', 'pdf'
+      ]
+    });
   });
 </script>
 

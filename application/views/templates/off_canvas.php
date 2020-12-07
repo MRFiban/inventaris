@@ -3,14 +3,14 @@
         <div class="off-canvas position-left" id="offCanvasLeft1" data-off-canvas>
             <!-- Your menu or Off-canvas content goes here -->
             <ul class=" vertical menu accordion-menu" data-accordion-menu>
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Inventaris</a></li>
-                <li><a href="#">Gudang</a></li>
-                <li><a href="#">Projek</a></li>
-                <li><a href="#">Pesanan</a></li>
-                <li><a href="#">Pembelian</a></li>
-                <li><a href="#">Laporan</a></li>
-                <li><a href="#">Prakira</a>
+                <li><a href="<?php echo base_url("inventory/dashboard"); ?>">Beranda</a></li>
+                <li><a href="<?php echo base_url("inventory/current_inventory"); ?>">Inventaris</a></li>
+                <li><a href="<?php echo base_url("inventory/warehouses"); ?>">Gudang</a></li>
+                <li><a href="<?php echo base_url("inventory/projects"); ?>">Projek</a></li>
+                <li><a href="<?php echo base_url("inventory/outgoing_orders"); ?>">Pesanan Keluar</a></li>
+                <li><a href="<?php echo base_url("inventory/incoming_purchases"); ?>">Pembelian Masuk</a></li>
+                <li><a href="<?php echo base_url("inventory/reports"); ?>">Laporan</a></li>
+                <li><a href="<?php echo base_url("inventory/forecast"); ?>">Prakira</a>
                 <li><a href="#">-</a>
                     <ul class="menu vertical nested">
                         <li><a href="#">Item 1A</a></li>

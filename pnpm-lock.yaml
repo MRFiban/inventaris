@@ -79,14 +79,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-5eFOm2SyFPK4Rh3XMMRDjN7lBH0orh3ss0g3rTYZnBQ+r6YPj7lgDyCvPphynHvUrobJmeMignBr6Acw9mAPlw==
-  /@babel/helper-call-delegate/7.8.7:
-    dependencies:
-      '@babel/helper-hoist-variables': 7.8.3
-      '@babel/traverse': 7.9.0
-      '@babel/types': 7.9.0
-    dev: true
-    resolution:
-      integrity: sha512-doAA5LAKhsFCR0LAFIf+r2RSMmC+m8f/oQ+URnUET/rWeEzC0yTRmAGyWkD4sSu3xwbS7MYQ2u+xlt1V5R56KQ==
   /@babel/helper-compilation-targets/7.8.7_@babel+core@7.9.0:
     dependencies:
       '@babel/compat-data': 7.9.0
@@ -640,17 +632,16 @@ packages:
       '@babel/core': ^7.0.0-0
     resolution:
       integrity: sha512-57FXk+gItG/GejofIyLIgBKTas4+pEU47IXKDBWFTxdPd7F80H8zybyAY7UoblVfBhBGs2EKM+bJUu2+iUYPDQ==
-  /@babel/plugin-transform-parameters/7.8.8_@babel+core@7.9.0:
+  /@babel/plugin-transform-parameters/7.9.3_@babel+core@7.9.0:
     dependencies:
       '@babel/core': 7.9.0
-      '@babel/helper-call-delegate': 7.8.7
       '@babel/helper-get-function-arity': 7.8.3
       '@babel/helper-plugin-utils': 7.8.3
     dev: true
     peerDependencies:
       '@babel/core': ^7.0.0-0
     resolution:
-      integrity: sha512-hC4Ld/Ulpf1psQciWWwdnUspQoQco2bMzSrwU6TmzRlvoYQe4rQFy9vnCZDTlVeCQj0JPfL+1RX0V8hCJvkgBA==
+      integrity: sha512-fzrQFQhp7mIhOzmOtPiKffvCYQSK10NR8t6BBz2yPbeUHb9OLW8RZGtgDRBn8z2hGcwvKDL3vC7ojPTLNxmqEg==
   /@babel/plugin-transform-property-literals/7.8.3_@babel+core@7.9.0:
     dependencies:
       '@babel/core': 7.9.0
@@ -781,7 +772,7 @@ packages:
       '@babel/plugin-transform-named-capturing-groups-regex': 7.8.3_@babel+core@7.9.0
       '@babel/plugin-transform-new-target': 7.8.3_@babel+core@7.9.0
       '@babel/plugin-transform-object-super': 7.8.3_@babel+core@7.9.0
-      '@babel/plugin-transform-parameters': 7.8.8_@babel+core@7.9.0
+      '@babel/plugin-transform-parameters': 7.9.3_@babel+core@7.9.0
       '@babel/plugin-transform-property-literals': 7.8.3_@babel+core@7.9.0
       '@babel/plugin-transform-regenerator': 7.8.7_@babel+core@7.9.0
       '@babel/plugin-transform-reserved-words': 7.8.3_@babel+core@7.9.0
@@ -6297,7 +6288,7 @@ packages:
       integrity: sha1-AI4G2AlDIMNy28L47XagymyKxBk=
 specifiers:
   '@babel/core': ^7.8.7
-  '@babel/preset-env': ^7.8.7
+  '@babel/preset-env': ^7.9.0
   autoprefixer: ^9.7.4
   browser-sync: ^2.26.7
   cssnano: ^4.1.10
