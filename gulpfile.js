@@ -3,11 +3,11 @@ const sourcemaps = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const concat = require("gulp-concat");
 const babel = require("gulp-babel");
-const uglify = require("gulp-uglify");
+// const uglify = require("gulp-uglify");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
-const replace = require("gulp-replace");
+// const replace = require("gulp-replace");
 const server = require("browser-sync").create();
 const pipeline = require("readable-stream").pipeline;
 
@@ -17,17 +17,19 @@ const source = {
 		"node_modules/jquery/dist/jquery.js",
 		"node_modules/motion-ui/dist/motion-ui.js",
 		"node_modules/what-input/dist/what-input.js",
-		"src/js/foundation.js"
-	]
+		"node_modules/foundation-sites/dist/js/foundation.js",
+		"assets/DataTables/datatables.js",
+		"dist/dataTables.altEditor.free.js",
+	],
 };
 
 function cssTranspile() {
 	return pipeline(
-		src("scss/app.scss"),
+		src("src/scss/app.scss"),
 		sourcemaps.init(),
 		sass({
 			outputStyle: "expanded",
-			includePaths: source.scss
+			includePaths: source.scss,
 		}),
 
 		postcss([autoprefixer(), cssnano()]),
@@ -47,11 +49,13 @@ function jsTranspile() {
 }
 
 function buildJs() {
-	return src(source.js)
-		.pipe(babel())
-		.pipe(concat("app.js"))
-		.pipe(uglify())
-		.pipe(dest("assets/js"));
+	return (
+		src(source.js)
+			.pipe(babel())
+			.pipe(concat("app.js"))
+			// .pipe(uglify())
+			.pipe(dest("assets/js"))
+	);
 }
 
 function jsBundle() {
@@ -70,8 +74,8 @@ function reload() {
 function serve(done) {
 	server.init({
 		server: {
-			baseDir: "./"
-		}
+			baseDir: "./",
+		},
 	});
 	watch("scss/*.scss", cssTranspile);
 	watch("*.html").on("change", reload);

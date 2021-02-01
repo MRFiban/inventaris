@@ -27,25 +27,25 @@
 		"defaults"
 	],
 	"devDependencies": {
-		"@babel/core": "^7.8.7",
-		"@babel/preset-env": "^7.9.0",
-		"autoprefixer": "^9.7.4",
-		"browser-sync": "^2.26.7",
+		"@babel/core": "^7.12.9",
+		"@babel/preset-env": "^7.12.7",
+		"autoprefixer": "^9.8.6",
+		"browser-sync": "^2.26.13",
 		"cssnano": "^4.1.10",
 		"gulp": "^4.0.2",
-		"gulp-babel": "^8.0.0-beta.2",
+		"gulp-babel": "^8.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-postcss": "^8.0.0",
 		"gulp-replace": "^1.0.0",
-		"gulp-sass": "^4.0.2",
+		"gulp-sass": "^4.1.0",
 		"gulp-sourcemaps": "^2.6.5",
 		"gulp-uglify": "^3.0.2",
 		"readable-stream": "^3.6.0"
 	},
 	"dependencies": {
-		"foundation-sites": "^6.6.1",
-		"jquery": "^3.4.1",
+		"foundation-sites": "^6.6.3",
+		"jquery": "^3.5.1",
 		"motion-ui": "^2.0.3",
-		"what-input": "^5.2.7"
+		"what-input": "^5.2.10"
 	}
 }

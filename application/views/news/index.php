@@ -1,11 +1,48 @@
-<h2 class="bg-success text-center text-uppercase mb-auto"><?php echo $title; ?></h2>
+<!DOCTYPE html>
+<html>
 
-<?php foreach ($news as $news_item) : ?>
-        <div class="bg-primary card mb-3 mt-3 body container-sm text-center">
-                <h3 class="text-capitalize"><?php echo $news_item['title']; ?></h3>
-                <div class="main">
-                        <?php echo $news_item['text']; ?>
+<head>
+        <link href="<?php echo base_url() ?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="<?php echo base_url() ?>/assets/jquery/jquery-3.4.1.min.js"></script>
+        <script src="<?php echo base_url() ?>/assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+        $(document).ajaxStart(function() {
+                $("#ajax-wait").css({
+                        left: ($(window).width() - 32) / 2 + "px", // 32 = lebar gambar
+                        top: ($(window).height() - 32) / 2 + "px", // 32 = tinggi gambar
+                        display: "block"
+                })
+        }).ajaxComplete(function() {
+                $("#ajax-wait").fadeOut();
+        });
+</script>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+                $.ajax({
+                        type: 'POST',
+                        url: "<?php echo base_url(); ?>/mahasiswa/tampilMahasiswa",
+                        cache: false,
+                        success: function(data) {
+                                $("#tampil").html(data);
+                        }
+                });
+        });
+</script>
+
+<body>
+        <div class='container'>
+                <h2 align="center">APLIKASI CRUD AJAX DI CODEIGNITER</h2>
+                <div id="tampil">
+                        <!-- Data tampil disini -->
                 </div>
-                <p><a class="button" href="<?php echo site_url('news/view/' . $news_item['slug']); ?>">View article</a></p>
+                <div align="center">
+                        <div id='ajax-wait'>
+                                <img alt='loading...' src='<?php echo base_url() ?>/assets/animasi/Rolling-1s-84px.png' />
+                        </div>
+                </div>
         </div>
-<?php endforeach; ?>
+</body>
+
+</html>

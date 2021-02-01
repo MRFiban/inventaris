@@ -6,14 +6,14 @@
         <div class="grid-x grid-margin-x">
             <div class="cell small-12">
                 <label>Nama Barang
-                    <input name="test" type="text" placeholder="type some text here" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required>
+                    <input name="name" type="text" placeholder="Nama barang atau bahan (Wajib Diisi!)" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required>
                     <span class="form-error">
-                        Yo, you had better fill this out, it's required.
+                        Mohon isi dengan benar sesuai instruksi.
                     </span>
                 </label>
                 <p class="help-text" id="example1Hint1">Here's how you use this input field!</p>
             </div>
-            <div class="cell small-12">
+            <!-- <div class="cell small-12">
                 <label>Merk
                     <input name="test" type="text" placeholder="type some text here" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required>
                     <span class="form-error">
@@ -75,7 +75,7 @@
                     </span>
                 </label>
                 <p class="help-text" id="example1Hint1">Here's how you use this input field!</p>
-            </div>
+            </div> -->
             <div class="cell small-12">
                 <label>Jumlah Barang
                     <input name="test" type="text" placeholder="type some text here" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required>
@@ -85,7 +85,7 @@
                 </label>
                 <p class="help-text" id="example1Hint1">Here's how you use this input field!</p>
             </div>
-            <div class="cell small-12">
+            <!-- <div class="cell small-12">
                 <label>Harga
                     <input name="test" type="text" placeholder="type some text here" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required>
                     <span class="form-error">
@@ -93,7 +93,7 @@
                     </span>
                 </label>
                 <p class="help-text" id="example1Hint1">Here's how you use this input field!</p>
-            </div>
+            </div> -->
             <div class="cell small-12">
                 <label>Deskripsi
                     <input name="test" type="text" placeholder="type some text here" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required>
@@ -103,7 +103,7 @@
                 </label>
                 <p class="help-text" id="example1Hint1">Here's how you use this input field!</p>
             </div>
-            <div class="cell small-12">
+            <!-- <div class="cell small-12">
                 <label>Gambar
                     <input name="test" type="text" placeholder="type some text here" aria-describedby="example1Hint1" aria-errormessage="example1Error1" required>
                     <span class="form-error">
@@ -120,7 +120,7 @@
                     </span>
                 </label>
                 <p class="help-text" id="example1Hint1">Here's how you use this input field!</p>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -137,13 +137,15 @@
 </form>
 
 <div class="float-center" style="width: 90%">
-
     <table id="inventory_table" class="display hover">
         <thead>
             <tr>
                 <th>#</th>
                 <th>ID</th>
-                <th>Name</th>
+                <th>Nama</th>
+                <th>Jumlah</th>
+                <th>Deskripsi</th>
+                <!-- <th>#</th>
                 <th>#</th>
                 <th>#</th>
                 <th>#</th>
@@ -156,10 +158,7 @@
                 <th>#</th>
                 <th>#</th>
                 <th>#</th>
-                <th>#</th>
-                <th>#</th>
-                <th>#</th>
-                <th>#</th>
+                <th>#</th> -->
 
             </tr>
         </thead>
@@ -170,22 +169,22 @@
                     <td><?php echo $item_index; ?></td>
                     <td><?php echo $item['item_id']; ?></td>
                     <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
-                    <td><?php echo $item['name']; ?></td>
+                    <td><?php echo $item['amount']; ?></td>
+                    <td><?php echo $item['description']; ?></td>
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
+                    <!-- <td><?php echo $item['name']; ?></td> -->
 
                 </tr>
             <?php $item_index += 1;
@@ -195,7 +194,10 @@
             <tr>
                 <th>#</th>
                 <th>ID</th>
-                <th>Name</th>
+                <th>Nama</th>
+                <th>Jumlah</th>
+                <th>Deskripsi</th>
+                <!-- <th>#</th>
                 <th>#</th>
                 <th>#</th>
                 <th>#</th>
@@ -209,9 +211,7 @@
                 <th>#</th>
                 <th>#</th>
                 <th>#</th>
-                <th>#</th>
-                <th>#</th>
-                <th>#</th>
+                <th>#</th> -->
 
             </tr>
         </tfoot>
