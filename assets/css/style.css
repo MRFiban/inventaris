@@ -1,4 +1,4 @@
-body {
+/* body {
 	font-family: "Ubuntu", sans-serif;
 	background-color: dimgray;
 }
@@ -7,7 +7,6 @@ body {
 	color: white;
 }
 ul li a {
-	/* background: rgb(192, 27, 27); */
 	color: white;
 }
 .fixed-left {
@@ -17,9 +16,61 @@ ul li a {
 	height: 100%;
 	width: 1px;
 	background-color: transparent;
-
-	/* border: 32px solid #73AD21; */
 }
 footer label a {
 	color: lightgray;
+}
+ */
+/* div.modal-content {
+	min-width: 1000;
+	margin: 0 auto;
+} */
+div.modal-dialog {
+	max-width: 90%;
+	margin: 0 auto;
+}
+div.modal-content div.modal-body div.form-group {
+	float: left;
+	width: 50%;
+	padding: 5px 20px;
+	clear: none;
+	box-sizing: border-box;
+}
+div.DTE_Body div.DTE_Body_Content div.DTE_Field {
+	width: 50%;
+	padding: 5px 20px;
+	box-sizing: border-box;
+}
+
+div.modal-content div.modal-body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.navbar {
+	padding: 0rem 1rem;
+}
+.nav-item {
+	padding: 0rem 1rem;
+}
+
+#logoutlink {
+	width: 13em;
+	color: white;
+}
+#logoutlink:hover span {
+	display: none;
+}
+#logoutlink:hover:before {
+	content: "Logout?";
+}
+
+body {
+	font-size: calc(0.9 * 1em);
+	/* margin: 0; */
+}
+footer {
+	background-color: #333;
+	color: rgb(176, 203, 252);
 }
