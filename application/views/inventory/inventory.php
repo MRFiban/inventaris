@@ -162,6 +162,24 @@
                                     alignment: 'left',
                                     margin: [5, 2]
                                 });
+                                doc.content.splice(3, 0, {
+                                    // text: '\n\n\n\n\nTanggal: ' + tanggal + '\n\n\n\n\n' + actor + '\n',
+                                    // alignment: 'left',
+
+                                    // margin: [5, 2]
+                                    columns: [{
+                                            alignment: 'center',
+                                            text: '\n\nMengetahui,\nKepala Proyek' + '\n\n\n\n\n' + actor + '\n',
+                                        },
+                                        {},
+                                        {},
+                                        {
+                                            alignment: 'center',
+                                            text: '\n\nBandung, ' + tanggal + '\n\n\n\n\n' + actor + '\n',
+
+                                        }
+                                    ]
+                                });
                             }
                         },
                         'csv',

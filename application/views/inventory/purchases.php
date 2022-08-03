@@ -205,7 +205,7 @@
                                     margin: [5, 2]
                                 });
                             }
-                        }, 'colvis'
+                        }, 'csv', 'colvis'
                     ],
                     onAddRow: function(datatable, rowdata, success, error) {
                         $.ajax({
@@ -276,7 +276,7 @@
                         "<'row'<'col-sm-12'tr>>Q",
                     // "<'row'<'col-sm-12 col-md-5'i> <'col-sm-12 col-md-7'p>>",
                     select: 'single',
-                    scrollY: 400,
+                    scrollY: 200,
                     // scrollX: true,
                     deferRender: true,
                     scroller: true,
@@ -328,7 +328,7 @@
                                     margin: [5, 2]
                                 });
                             }
-                        }, 'colvis'
+                        }, 'csv', 'colvis'
                     ],
                     onAddRow: function(datatable, rowdata, success, error) {
                         $.ajax({

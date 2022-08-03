@@ -67,7 +67,7 @@
                         data: "project_id",
                         title: "ID",
                         type: "natural",
-                        disabled: true,
+                        disabled: false,
                         render: function(data, type, row, meta) {
                             return 'P-' + row['project_id'];
                         }
@@ -146,7 +146,7 @@
                                     margin: [5, 2]
                                 });
                             }
-                        }, 'colvis'
+                        }, 'csv', 'colvis'
                     ],
                     onAddRow: function(datatable, rowdata, success, error) {
                         $.ajax({
@@ -306,7 +306,7 @@
                                         colCount.push('*');
                                     }
                                 });
-                                doc.content[1].table.widths = ['7%', '50%', '25%', '9%', '9%'];
+                                doc.content[1].table.widths = ['7%', '40%', '35%', '9%', '9%'];
 
                                 doc.content.splice(1, 0, {
                                     text: 'Tanggal: ' + tanggal + '\n' + actor + '\n',

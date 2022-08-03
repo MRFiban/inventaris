@@ -99,7 +99,7 @@
                                   margin: [5, 2]
                               });
                           }
-                      }, 'colvis'
+                      }, 'csv', 'colvis'
                   ],
                   onAddRow: function(datatable, rowdata, success, error) {
                       $.ajax({
